@@ -17,7 +17,7 @@ source_urls = os.getenv('RELAY_LINKS_LIST', [
     "https://radio-soyuz.ru:1045/stream", # Kniga v Sluh 9
     "https://storyfm.hostingradio.ru:8031/storyfm128.mp3", # Story FM 10
     "https://stream.cassiopeia-station.ru:5125/stream" # Cassiopeya 11
-]
+])
 
 # Перенаправление потока
 @app.route('/audio_stream/<int:index>')
