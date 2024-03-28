@@ -1,0 +1,10 @@
+services:
+  My_relay:
+    build:
+      context: /home/app/relay
+      dockerfile: Dockerfile
+    image: my_relay:latest
+    container_name: my_relay
+    network_mode: host
+    environment:
+       - PORT=8001
