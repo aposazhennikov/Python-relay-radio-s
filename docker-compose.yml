@@ -1,7 +1,7 @@
 services:
   My_relay:
     build:
-      context: /home/app/relay
+      context: ./relay
       dockerfile: Dockerfile
     image: my_relay:latest
     container_name: my_relay
