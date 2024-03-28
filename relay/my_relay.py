@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # Список URL-ов для ретрансляции
-source_urls = [
+source_urls = os.getenv('RELAY_LINKS_LIST', [
     "http://server.audiopedia.su:8000/ices128", # Staroe radio 0
     "https://lk.castnow.ru:8100/oldbrief-320.mp3",  # old brief radio 1
     "https://umnoe.amgradio.ru/Umnoe",    # umnoe radio  2
@@ -17,8 +17,6 @@ source_urls = [
     "https://radio-soyuz.ru:1045/stream", # Kniga v Sluh 9
     "https://storyfm.hostingradio.ru:8031/storyfm128.mp3", # Story FM 10
     "https://stream.cassiopeia-station.ru:5125/stream" # Cassiopeya 11
-
-
 ]
 
 # Перенаправление потока
